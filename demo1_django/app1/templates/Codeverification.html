@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+<br>
+<center>
+<div>
+    <form  method="post" >
+      {% csrf_token %}
+    <div class="card border-light mb-3" style="max-width: 30rem;max-height:40rem;">
+        <h3 style="color:red">{{ q }}</h3>
+  <div class="card-header">Verify Captcha</div>
+  <div class="card-body">
+    <h4 class="card-title">Enter the Verification Code received from your mail!!
+    </h4>
+    <div class="form-group">
+        {% load static %}
+  <label class="col-form-label mt-4">  <img src="{% static 'captcha.jpg' %}" style="width:100%">
+</label>
+  <input type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+
+</div>
+
+      <input type="submit" class="btn btn-primary" style="background-color:grey;border-color:grey" name="vsub" href="">
+  </div>
+      <!---  <h4>Note : <h6 style="color:red">If you entered the wrong captcha, Please contact us</h6></h4>
+        <a href="/Contact">Contact Us</a>-->
+</div>
+
+    </form>
+
+</div>
+
+    </center>
+
+{% endblock %}

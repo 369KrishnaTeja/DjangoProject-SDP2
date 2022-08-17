@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+<br>
+<center>
+<div style="background-color:grey;border-radius:60px;width:600px;border:double;border-width:10px">
+
+    <h3 style="font-family:fantasy">Your Profile</h3>
+        Full Name : {{ user.first_name }}
+        <br>
+        Email : {{ user.email }}
+        <br>
+        Username : {{ user.username }}
+        <br>
+    <br>
+</div>
+    </center>
+
+{% endblock %}

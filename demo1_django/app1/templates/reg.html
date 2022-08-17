@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+<center>
+    <div class="regitems">
+    <div><h1 style="font-family:fantasy">Register Here</h1></div>
+    <form  method="post">
+        {% csrf_token %}
+        <div class="form-group">
+        <label class="form-label mt-4">Enter Username:</label>
+            <input type="text" placeholder="username" name="user" class="form-control" style="width:500px">
+            <label class="form-label mt-4">Enter Password:</label>
+        <input type="password" placeholder="password" name="pass" class="form-control" style="width:500px">
+            <label class="form-label mt-4">Enter Full Name:</label>
+        <input type="text" placeholder="Full Name" name="full" class="form-control" style="width:500px">
+       <label class="form-label mt-4">Enter Email: </label>
+            <input text="text" placeholder="Email" name="email"email class="form-control" style="width:500px">
+            <br>
+        </div>
+                <input type="submit" class="btn btn-primary" style="background-color:grey;border-color:grey">
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </form>
+</center>
+{% endblock %}

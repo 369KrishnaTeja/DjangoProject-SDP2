@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+<center><h5 style="font-family:fantasy">BAG-(Bid And Gain)</h5></center>
+<div class="card mb-3">
+  <h3 class="card-header">About Us</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+    <rect width="100%" height="100%" fill="#868e96"></rect>
+    <text x="30%" y="50%" fill="green" dy=".3em" >B</text>
+    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">A</text>
+    <text x="70%" y="50%" fill="black" dy=".3em">G</text>
+  </svg>
+  <div class="card-body">
+    <h2 class="card-text">Developing Team</h2>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Krishna Teja Kurapati-------------> <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Krishna Teja Kurapati</a>
+</li>
+    <li class="list-group-item">Koushik Lankalapalli --------------> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Koushik Lankalapalli</button>
+</li>
+    <li class="list-group-item">Sai Ganesh Chintalapudi --------->  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Sai Ganesh Chintalapudi</button>
+</li>
+  </ul>
+ <!---- <p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Krishna Teja Kurapati</a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Koushik Lankalapalli</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Sai Ganesh Chintalapudi</button>
+</p>--->
+  <div class="acc">
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+            <center><img src="{% static 'kt.jpg' %}" alt="My image" style="height:200px"></center>
+        I am  KLU Student and my register number is 2000031884 and as per the project from our university I am the Team Lead for the Project.I am a part in the Development which is Technical Work and Non Technical Work
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+            <center><img src="{% static 'kl.jpg' %}" alt="My image" style="height:200px"></center>
+        I am  KLU Student and my register number is 2000031840 and as per the project from our university I am a helping hand for the Project.I am a part in the Development which is  Non Technical Work
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body">
+            <center><img src="{% static 'CHSG.jpg' %}" alt="My image" style="height:200px"></center>
+        I am  KLU Student and my register number is 2000030199 and as per the project from our university I am a helping hand for the Project.I am a part in the Development which is Technical Work and Non Technical Work
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<style>
+  acc{
+
+  }
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

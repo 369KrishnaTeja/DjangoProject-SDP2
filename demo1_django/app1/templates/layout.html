@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<!-- <button type="button" class="btn btn-link"><li title="l3"><a href="http://127.0.0.1:8000/app1/" >Home</a></button>
+<button type="button" class="btn btn-link"><li title="l3"><a href="http://127.0.0.1:8000/app1/login/" >Login</a></button>
+<button type="button" class="btn btn-link"><li title="l3"><a href="http://127.0.0.1:8000/app1/reg/" >Registration</a></button> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <img src="{% static 'Bid.jpeg' %}" alt="My image" style="height:60px">
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/fea/">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/bid/">Bidding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+        <div class="dropdown">
+<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+      {% if user.is_authenticated %}
+         <a class="dropdown-item" href="http://127.0.0.1:8000/data/">Profile</a>
+         <a class="dropdown-item" href="http://127.0.0.1:8000/logout/">Logout</a>
+      {% else %}
+         <a class="dropdown-item" href="http://127.0.0.1:8000/login/">Login</a>
+         <a class="dropdown-item" href="http://127.0.0.1:8000/reg/">Register</a>
+      {% endif %}
+  </div>
+</div>
+
+    </div>
+  </div>
+</nav>
+{% block content %} {% endblock %}
+
+<div class="footer-clean" style="height:16%">
+        <footer style="height:15%">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="https://www.linkedin.com/in/bidding-system-03ba82233/"><i class="icon ion-social-linkedin"></i></a><a href="https://www.instagram.com/bag_bid_and_gain/"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">BAG © 2022</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
